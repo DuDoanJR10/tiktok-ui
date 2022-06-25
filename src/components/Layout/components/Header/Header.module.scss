@@ -110,3 +110,20 @@
         background-color: transparent;
     }
 }
+
+.action-btn {
+    color: #161823;
+    font-size: 2.2rem;
+    background-color: transparent;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.use-avatar {
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 50%;
+}
