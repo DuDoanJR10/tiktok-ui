@@ -5,14 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
     faSpinner,
-    faMagnifyingGlass,
     faEllipsisVertical,
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faArrowUpFromBracket,
     faCoins,
     faGear,
+    faArrowUpFromBracket,
     faUser,
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
@@ -25,6 +24,8 @@ import classNames from 'classnames/bind';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { MailboxIcon, MessengerIcon, SearchIcon, UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -131,7 +132,7 @@ function Header() {
                         <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -139,9 +140,19 @@ function Header() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
-                                <button className={cx('action-btn')}>
+                            <Tippy content="Upload video" placement="bottom">
+                                <button className={cx('action-btn', 'upload')}>
                                     <FontAwesomeIcon icon={faArrowUpFromBracket} />
+                                </button>
+                            </Tippy>
+                            <Tippy content="Messenger" placement="bottom">
+                                <button className={cx('action-btn', 'messenger')}>
+                                    <MessengerIcon />
+                                </button>
+                            </Tippy>
+                            <Tippy content="Mailbox" placement="bottom">
+                                <button className={cx('action-btn', 'mailbox')}>
+                                    <MailboxIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -153,8 +164,8 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
-                                src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-1/278669195_142423274975815_70500520278671602_n.jpg?stp=dst-jpg_p320x320&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=2CkYDo7mzDcAX_fNaA7&_nc_ht=scontent.fhan14-2.fna&oh=00_AT95GsbkdDLo9EYTkryPBDdzq97HyRENri0VJFI07G2oNQ&oe=62BAA9F1"
+                            <Image
+                                src="https://scontent.fhan5-3.fna.fbcdn.net/v/t39.30808-1/278669195_142423274975815_70500520278671602_n.jpg?stp=dst-jpg_p320x320&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=CSTl5yq9c6oAX8Ccjt_&_nc_ht=scontent.fhan5-3.fna&oh=00_AT8hnMlcAE3Y9RY0SnlUKv2HjRqzLgblxIVx7cMbeDh7Hg&oe=62C48D31"
                                 className={cx('use-avatar')}
                                 alt="Nguyen Ngoc Thanh"
                             />

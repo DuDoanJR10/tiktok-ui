@@ -112,11 +112,20 @@
 }
 
 .action-btn {
+    display: flex;
     color: #161823;
     font-size: 2.2rem;
     background-color: transparent;
     padding: 4px 12px;
     cursor: pointer;
+
+    &.upload {
+        padding: 6px 12px;
+    }
+
+    &.mailbox {
+        padding: 1px 12px;
+    }
 }
 
 .use-avatar {
