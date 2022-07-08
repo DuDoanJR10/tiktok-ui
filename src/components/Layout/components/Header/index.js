@@ -44,6 +44,76 @@ const MENU_ITEMS = [
                     code: 'vi',
                     title: 'Tiếng Việt',
                 },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Korea',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'American',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'Espanol',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'French',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Chinese',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Japan',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'Italiano',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Brazil',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Australian',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Singapore',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'Germany',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Argentina',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Chile',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Thai',
+                },
             ],
         },
     },

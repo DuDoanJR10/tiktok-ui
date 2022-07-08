@@ -11,6 +11,10 @@
     background-color: var(--white);
 }
 
+.menu-body {
+    overflow: auto;
+}
+
 .menu-item {
     width: 100%;
     justify-content: start;
@@ -33,6 +37,7 @@
     position: relative;
     height: 50px;
     margin-top: -8px;
+    flex-shrink: 0;
 }
 
 .back-btn {

@@ -32,23 +32,25 @@ function Menu({ children, items = [], onChange = defaultFn, hideOnClick = false 
                                 }}
                             />
                         )}
-                        {current.data.map((item, index) => {
-                            const isParent = !!item.children;
+                        <div className={cx('menu-body')}>
+                            {current.data.map((item, index) => {
+                                const isParent = !!item.children;
 
-                            return (
-                                <MenuItem
-                                    key={index}
-                                    data={item}
-                                    onClick={() => {
-                                        if (isParent) {
-                                            setHistory((prev) => [...prev, item.children]);
-                                        } else {
-                                            onChange(item);
-                                        }
-                                    }}
-                                />
-                            );
-                        })}
+                                return (
+                                    <MenuItem
+                                        key={index}
+                                        data={item}
+                                        onClick={() => {
+                                            if (isParent) {
+                                                setHistory((prev) => [...prev, item.children]);
+                                            } else {
+                                                onChange(item);
+                                            }
+                                        }}
+                                    />
+                                );
+                            })}
+                        </div>
                     </PopperWrapper>
                 </div>
             )}
