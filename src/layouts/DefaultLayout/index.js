@@ -2,10 +2,11 @@ import Header from '~/layouts/components/Header';
 import Sidebar from './Sidebar';
 import classNames from 'classnames/bind';
 import styles from './DefaultLayout.module.scss';
+import PropTypes from 'prop-types';
 
 const cx = classNames.bind(styles);
 
-function HeaderOnly({ children }) {
+function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
@@ -17,4 +18,8 @@ function HeaderOnly({ children }) {
     );
 }
 
-export default HeaderOnly;
+DefaultLayout.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
+export default DefaultLayout;
