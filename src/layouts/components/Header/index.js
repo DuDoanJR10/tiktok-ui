@@ -15,7 +15,7 @@ import {
     faArrowRightFromBracket,
 } from '@fortawesome/free-solid-svg-icons';
 
-import routesConfig from '~/config/routes';
+import config from '~/config';
 import images from '~/assets/images';
 import styles from './Header.module.scss';
 import classNames from 'classnames/bind';
@@ -168,7 +168,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
 
@@ -203,7 +203,7 @@ function Header() {
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://scontent.fhan5-3.fna.fbcdn.net/v/t39.30808-1/278669195_142423274975815_70500520278671602_n.jpg?stp=dst-jpg_p320x320&_nc_cat=103&ccb=1-7&_nc_sid=7206a8&_nc_ohc=CSTl5yq9c6oAX8Ccjt_&_nc_ht=scontent.fhan5-3.fna&oh=00_AT8hnMlcAE3Y9RY0SnlUKv2HjRqzLgblxIVx7cMbeDh7Hg&oe=62C48D31"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/1c60bd6f6e3f9647081fda5206dcbfd9~c5_100x100.jpeg?x-expires=1657443600&x-signature=GCOFzexPILqm7doDkqC2gRqUBa4%3D"
                                 className={cx('use-avatar')}
                                 alt="Nguyen Ngoc Thanh"
                             />
